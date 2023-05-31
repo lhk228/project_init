@@ -1,0 +1,11 @@
+@import "./variables.scss";
+@import "./common.scss";
+@import "./component/ToastAlert.scss";
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+body {
+
+  @include mobile{ 
+    /*브라우저 사이즈767px이하일때*/
+  }
+}
