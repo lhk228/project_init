@@ -17,7 +17,6 @@ function App() {
 
   return (
     <>
-    <div>헤이</div>
     <QueryClientProvider client={queryClient}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
