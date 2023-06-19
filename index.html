@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <p id="ITEM"></p>
+    <p id="PRICE"></p>
+  </body>
+  <script>
+    $(function () {
+      //url => 값
+      var url = window.location.href;
+      url = url.split("?");
+      url = url[1].split("+");
+      var item = url[0];
+      var price = url[1];
+      var data = { item, price };
+      $("#ITEM").text(`ITEM : ${item}`);
+      $("#PRICE").text(`PRICE : ${price}`);
+
+      //전달하기
+      localStorage.setItem("item", JSON.stringify(data));
+      setTimeout(() => {
+        window.close();
+      }, 10);
+    });
+  </script>
+</html>

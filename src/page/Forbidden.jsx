@@ -10,7 +10,7 @@ const Forbidden = () => {
           onClick={() => {
             navigate("/");
           }}
-        >
+        >접근금지페이지
         </div>
       </div>
     </>
